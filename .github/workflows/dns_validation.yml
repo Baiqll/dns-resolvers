@@ -19,7 +19,7 @@ jobs:
           sudo python3 setup.py install
           rm ../resolvers.txt || true
           dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 12 -o  ../resolvers.txt
-          echo -e "8.8.8.8\n8.8.4.4\n1.1.1.1\n1.0.0.1\n9.9.9.9\n149.112.112.112\n208.67.222.222\n208.67.220.220\n185.228.168.9\n185.228.169.9\n76.76.19.19\n76.223.122.150\n94.140.14.14\n94.140.15.15" >> ../resolvers.txt
+          echo -e "\n8.8.8.8\n8.8.4.4\n1.1.1.1\n1.0.0.1\n9.9.9.9\n149.112.112.112\n208.67.222.222\n208.67.220.220\n185.228.168.9\n185.228.169.9\n76.76.19.19\n76.223.122.150\n94.140.14.14\n94.140.15.15" >> ../resolvers.txt
           sed -i '/^$/d' ../resolvers.txt
           sort -u -o ../resolvers.txt ../resolvers.txt
 
